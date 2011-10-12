@@ -1,0 +1,81 @@
+body {
+  padding-top: 60px;
+}
+
+/* drupal 6 default class 
+*
+** Collapsing fieldsets
+*/
+html.js fieldset.collapsed {
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  margin-bottom: 0;
+  height: 1em;
+}
+html.js fieldset.collapsed * {
+  display: none;
+}
+html.js fieldset.collapsed legend {
+  display: block;
+}
+html.js fieldset.collapsible legend a {
+  padding-left: 15px; /* LTR */
+  background: url(../../misc/menu-expanded.png) 5px 75% no-repeat; /* LTR */
+}
+html.js fieldset.collapsed legend a {
+  background-image: url(../../misc/menu-collapsed.png); /* LTR */
+  background-position: 5px 50%; /* LTR */
+}
+/* Note: IE-only fix due to '* html' (breaks Konqueror otherwise). */
+* html.js fieldset.collapsed legend,
+* html.js fieldset.collapsed legend *,
+* html.js fieldset.collapsed table * {
+  display: inline;
+}
+/* For Safari 2 to prevent collapsible fieldsets containing tables from dissapearing due to tableheader.js. */
+html.js fieldset.collapsible {
+  position: relative;
+}
+html.js fieldset.collapsible legend a {
+  display: block;
+}
+/* Avoid jumping around due to margins collapsing into collapsible fieldset border */
+html.js fieldset.collapsible .fieldset-wrapper {
+  overflow: auto;
+}
+fieldset {
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid #D9EAF5;
+}
+fieldset legend { 
+	display: block;
+}
+
+/* !drupal 6 default class */
+
+#content{
+	background-color: #f7f7f7;
+}
+.region-sidebar-first{
+	/*background-color: #ccc;*/
+}
+.admin{
+	
+}
+.admin .left{
+	float: left;
+	width: 48%;
+}
+.admin .right{
+	float: right;
+	width: 48%;
+}
+.clear-block {
+	/*display:block;*/
+}
+footer{
+	/*float: none;
+	clear: both;*/
+}
